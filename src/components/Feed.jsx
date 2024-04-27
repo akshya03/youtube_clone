@@ -1,6 +1,7 @@
 import { Box, Stack } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import Sidebar from './Sidebar';
+import Videos from './Videos';
 
 const Feed = () => {
   
@@ -25,9 +26,13 @@ const Feed = () => {
       </Box>
 
       <Box sx={{
-        padding: "8px"
+        padding: "8px",
+        overflow: 'auto',
+        height: '90vh',
+        flex: 2
       }}>
         <h2>New <span style={{color: '#f31503'}}>videos</span></h2>
+        <Videos videos={[]}/>
       </Box>
 
 

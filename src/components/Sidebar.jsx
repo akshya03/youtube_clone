@@ -7,14 +7,14 @@ const Sidebar = () => {
 
     return (
     <Stack
-        // direction="row"
+        direction="row"
         sx={{
             overflowY: "auto",
             height: {
                 sm: 'auto',
                 md: '97%'
             },
-            // flexDirection: {md: 'column'}
+            flexDirection: {md: 'column'}
         }}
     >
         {categories.map((category)=>(
