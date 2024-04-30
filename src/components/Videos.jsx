@@ -1,9 +1,24 @@
+import { Box, Stack } from '@mui/material';
 import React from 'react'
+import VideoCard from './VideoCard';
+import ChannelCard from './ChannelCard';
 
 const Videos = ({videos}) => {
   console.log(videos);
   return (
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, sed praesentium. Quam deserunt nemo aperiam aut veritatis, adipisci, voluptatum corporis labore soluta iure alias porro eius assumenda autem pariatur quis commodi? Eveniet commodi reiciendis iure, voluptates velit dolores! Quam earum eveniet, quos consequuntur maiores ex provident! Dicta ducimus eligendi obcaecati qui quia, maxime facilis magnam est.</div>
+    <Stack direction="row"
+      flexWrap="wrap"
+      justifyContent="space-evenly"
+      gap={2}
+    >
+      {videos.map((item, idx)=>(
+        <Box key={idx}>
+          {item.id.videoId && <VideoCard video={item}/>}
+          {item.id.channelId && <ChannelCard channelDetail={item}/>}
+        </Box>
+      ))}
+
+    </Stack>
   )
 }
 
