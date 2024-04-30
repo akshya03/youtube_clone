@@ -12,6 +12,7 @@ const Navbar = () => (
     top: 0,
     color: 'white',
     justifyContent: 'space-between',
+    zIndex: 100
     
   }}>
     <Link to="/" style={{

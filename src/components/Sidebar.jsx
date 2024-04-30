@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { categories } from '../utils/constants';
 import { Stack } from '@mui/material';
 
-const Sidebar = () => {
-    const [selectedCategory, setSelectedCategory] = useState('New');
+const Sidebar = ({selectedCategory, setSelectedCategory}) => {
 
     return (
     <Stack
@@ -25,6 +24,7 @@ const Sidebar = () => {
                     fontWeight: category.name === selectedCategory && 'bolder',
                 }}
                 key={category.name}
+                onClick={()=>setSelectedCategory(category.name)}
             >
                 <span style={{
                     marginRight: '13px',
