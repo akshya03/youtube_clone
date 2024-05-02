@@ -1,8 +1,23 @@
+import { Box, Card } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const ChannelCard = () => {
+const ChannelCard = ({channelDetail}) => {
   return (
-    <div>ChannelCard</div>
+    <Card sx={{
+      width: {
+          md: '350px',
+          sm: '100%'
+      },
+      // boxShadow: 'none',
+      borderRadius: '20px'
+  }}>
+    <Link to={`/channel/${}`}/>
+
+
+  </Card>
+
+
   )
 }
 
